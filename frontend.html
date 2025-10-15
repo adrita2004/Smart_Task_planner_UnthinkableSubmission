@@ -1,0 +1,19 @@
+<!-- index.html -->
+<form id="goalForm">
+  <input type="text" id="goal" placeholder="Enter your goal" required />
+  <button type="submit">Get Plan</button>
+</form>
+<pre id="result"></pre>
+<script>
+  document.getElementById('goalForm').onsubmit = async function(e) {
+    e.preventDefault();
+    const goal = document.getElementById('goal').value;
+    const res = await fetch('http://localhost:8000/plan', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({goal})
+    });
+    const data = await res.json();
+    document.getElementById('result').innerText = data.plan;
+  }
+</script>
