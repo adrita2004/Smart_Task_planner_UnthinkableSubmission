@@ -11,3 +11,5 @@ Backend API for breaking down user goals into actionable tasks/timelines using G
 
 ## Usage
 POST `/plan` with JSON:
+
+DEMO VIDEO LINK: https://drive.google.com/file/d/1xHL3X2yDjjUuPgzvAzKKYgXjd3uJa4vE/view?usp=sharing
